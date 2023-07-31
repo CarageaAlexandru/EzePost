@@ -13,6 +13,7 @@ class VerifyCsrfToken extends Middleware
      */
     protected $except = [
 //        disabled for stripe
-        '/webhook'
+        '/webhook',
+        'customer-portal'
     ];
 }

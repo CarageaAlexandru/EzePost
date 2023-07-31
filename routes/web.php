@@ -52,6 +52,7 @@ Route::middleware('auth')->group(function () {
 
 //    disabled csrf for webhook and this needs  to be outside of auth middleware
 Route::post('/webhook', [SubscriptionController::class, 'webhook'])->name('webhook');
+Route::post('/customer-portal', [SubscriptionController::class, 'customerPortal'])->name('customer-portal');
 
 
 Route::middleware('auth')->group(function () {

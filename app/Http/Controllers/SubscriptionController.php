@@ -7,6 +7,7 @@ use App\Models\Subscription;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Inertia\Inertia;
+use Stripe\Customer;
 use Stripe\Stripe;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
@@ -16,7 +17,7 @@ class SubscriptionController extends Controller
     public function checkout(Request $request)
     {
         $selected_plan = Plan::where('stripe_plan', $request->input('plan'))->first();
-        dd($selected_plan);
+//        dd($selected_plan);
         Stripe::setApiKey(env('STRIPE_SECRET'));
         $checkout_session = \Stripe\Checkout\Session::create([
             'line_items' => [[
@@ -62,6 +63,10 @@ class SubscriptionController extends Controller
             }
             $order->stripe_status = 'paid';
             $order->save();
+//            update the user with the stripe id save it to the database
+            $user = auth()->user();
+            $user->stripe_id = $customer->id;
+            $user->save();
             return Inertia::render('Success', [
                 'customer' => $customer,
             ]);
@@ -142,6 +147,24 @@ class SubscriptionController extends Controller
                 // Unexpected event type
                 error_log('Received unknown event type');
         }
+    }
 
+    public function customerPortal()
+    {
+        Stripe::setApiKey(env('STRIPE_SECRET'));
+
+        $customerID = auth()->user()->stripe_id;
+//        dd(Customer::all());
+        $customer = \Stripe\Customer::retrieve($customerID);
+
+// Authenticate your user.
+        $session = \Stripe\BillingPortal\Session::create([
+            'customer' => $customer,
+            'return_url' => 'https://example.com/account',
+        ]);
+
+// Redirect to the customer portal.
+        header("Location: " . $session->url);
+        exit();
     }
 }

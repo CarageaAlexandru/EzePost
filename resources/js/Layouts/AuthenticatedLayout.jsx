@@ -434,10 +434,12 @@ export default function Authenticated({user, header, children}) {
                                         ></path>
                                     </svg>
                                 </span>
-
-                                    <span className="ml-2 text-sm tracking-wide truncate">
-                                    Customer Portal
-                                </span>
+                                    <form method="POST" action="/customer-portal">
+                                        <button type="submit">Manage billing</button>
+                                    </form>
+                                    {/*<span className="ml-2 text-sm tracking-wide truncate">*/}
+                                    {/*Customer Portal*/}
+                                    {/*</span>*/}
                                 </a>
                             </li>
                         </ul>
