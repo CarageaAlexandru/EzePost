@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DownloadController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\SubscriptionController;
 use App\Http\Controllers\PackagesController;
 use App\Http\Controllers\ContactController;
@@ -60,5 +61,14 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+Route::middleware(['auth', 'is.admin'])->group(function () {
+    Route::get('/admin', [\App\Http\Controllers\AdminController::class, 'index'])->name('admin.dashboard');
+    // Add more admin routes here
+    Route::get('/admin/change-plans', [AdminController::class, 'showPlans'])->name('admin.change-plans');
+    Route::put('/admin/plan/{id}', [AdminController::class, 'updatePlan'])->name('admin.update-plan');
+
+});
+
 
 require __DIR__ . '/auth.php';
