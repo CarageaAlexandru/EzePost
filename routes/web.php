@@ -64,9 +64,13 @@ Route::middleware('auth')->group(function () {
 
 Route::middleware(['auth', 'is.admin'])->group(function () {
     Route::get('/admin', [\App\Http\Controllers\AdminController::class, 'index'])->name('admin.dashboard');
-    // Add more admin routes here
     Route::get('/admin/change-plans', [AdminController::class, 'showPlans'])->name('admin.change-plans');
     Route::put('/admin/plan/{id}', [AdminController::class, 'updatePlan'])->name('admin.update-plan');
+
+//    Receipts
+    Route::get('/admin/receipts', [ReceiptController::class, 'index'])->name('admin.receipts');
+    Route::post('/admin/receipt', [ReceiptController::class, 'generateReceipt'])->name('admin.receipt');
+    Route::get('/admin/receipt/{id}', [ReceiptController::class, 'showReceipt'])->name('admin.receipt.show');
 
 });
 

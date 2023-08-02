@@ -45,7 +45,7 @@ export default function AuthenticatedAdmin({auth, header, children}) {
 
                                 </span>
                                 <Link
-                                    href={route('admin.dashboard')}
+                                    href={route('admin.receipts')}
                                 >
                                     <span className="ml-2 text-sm tracking-wide truncate">
                                     Generate Receipts

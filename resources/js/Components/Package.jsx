@@ -4,7 +4,7 @@ import {CiReceipt} from "react-icons/ci";
 
 export default function Package({pkg}) {
     return (
-        <li className="flex justify-between items-start gap-x-6 py-5">
+        <div className="flex justify-between items-start gap-x-6 py-5">
             <div className="flex flex-col gap-y-2">
                 <span
                     className="text-base font-semibold leading-6 text-gray-900">{pkg.file_name}</span>
@@ -30,6 +30,6 @@ export default function Package({pkg}) {
                     </a>
                 </div>
             </div>
-        </li>
+        </div>
     );
 }
