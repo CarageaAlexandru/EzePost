@@ -5,12 +5,7 @@ import ApplicationLogo from '@/Components/ApplicationLogo';
 export default function NavBar({auth}) {
     const user = auth ? auth.user : null;
     console.log(user)
-    let dynamicRoute = {
-        'all': 'all',
-        'received': 'received',
-        'sent': 'sent',
-        'viewed': 'viewed'
-    }
+   
     return (
         <div className="bg-white border-b border-gray-100 w-full fixed top-0">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
