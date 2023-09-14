@@ -13,13 +13,20 @@ export default function Receipt({auth, files, receipt}) {
 
 // Function to generate the PDF
     const generatePDF = () => {
-        const pdf = new jsPDF();
+        const pdf = new jsPDF("p", "mm", "a4"); // A4 size
 
-        // Function to convert HTML to canvas and add to PDF
         const addImageToPDF = (pdfContent) => {
             html2canvas(pdfContent).then((canvas) => {
                 const imgData = canvas.toDataURL("image/jpeg", 1.0);
-                pdf.addImage(imgData, "JPEG", 0, 0, 210, 297); // You may need to adjust the size here
+
+                const canvasWidth = canvas.width;
+                const canvasHeight = canvas.height;
+                const aspectRatio = canvasWidth / canvasHeight;
+
+                const pdfWidth = 210; // A4 width
+                const pdfHeight = pdfWidth / aspectRatio;
+
+                pdf.addImage(imgData, "JPEG", 0, 0, pdfWidth, pdfHeight);
                 pdf.save(`proof_of_delivery-${receipt.id}.pdf`);
             });
         };
@@ -27,6 +34,7 @@ export default function Receipt({auth, files, receipt}) {
         const pdfContainer = document.getElementById("pdf-container");
         addImageToPDF(pdfContainer);
     };
+
 
     return (
         <AuthenticatedAdmin auth={auth}>

@@ -75,7 +75,7 @@ export default function ChangePrices({auth, initialPlans}) {
                     resolve(response);
                 }
             } catch (error) {
-                
+
                 if (error.response && error.response.status === 422) {
                     setErrors(error.response.data.errors);
                     reject(error);
@@ -224,9 +224,6 @@ export default function ChangePrices({auth, initialPlans}) {
                                                 className="py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
                                                 onClick={addOption}>Add Option
                                             </button>
-
-
-                                            {/* You can add more fields here... */}
                                         </div>
                                         <div className="p-6 border-t border-gray-200 flex justify-end">
                                             <button onClick={closeModal} type="button"

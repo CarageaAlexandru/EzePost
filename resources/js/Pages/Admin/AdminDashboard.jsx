@@ -59,7 +59,7 @@ export default function AdminDashboard({auth, allCustomers, customers}) {
                         <div className="px-5">
                             <ul className="flex border-b">
                                 <li onClick={() => setActiveStatus(1)}
-                                    className={activeStatus === 1 ? "text-sm border-indigo-700 pt-3 rounded-t text-indigo-700 mr-12" : "text-sm text-gray-600 py-3 flex items-center mr-12 hover:text-indigo-700 cursor-pointer"}>
+                                    className={activeStatus === 1 ? "text-sm border-indigo-700 pt-3 rounded-t bg-purple-300 text-indigo-700 mr-12" : "text-sm text-gray-600 py-3 flex items-center mr-12 hover:text-indigo-700 cursor-pointer"}>
                                     <span>All Customers</span>
                                     <span
                                         className="inline-flex items-center justify-center p-3 h-6 w-6 rounded-full bg-red-500 text-white text-xs ml-2">
@@ -67,7 +67,7 @@ export default function AdminDashboard({auth, allCustomers, customers}) {
                                     </span>
                                 </li>
                                 <li onClick={() => setActiveStatus(2)}
-                                    className={activeStatus === 2 ? "text-sm border-indigo-700 pt-3 rounded-t text-indigo-700 mr-12" : "text-sm text-gray-600 py-3 flex items-center mr-12 hover:text-indigo-700 cursor-pointer"}>
+                                    className={activeStatus === 2 ? "text-sm border-indigo-700 pt-3 rounded-t bg-purple-300 text-indigo-700 mr-12" : "text-sm text-gray-600 py-3 flex items-center mr-12 hover:text-indigo-700 cursor-pointer"}>
                                     <span>Active Customers</span>
                                     <span
                                         className="inline-flex items-center justify-center p-3 h-6 w-6 rounded-full bg-red-500 text-white text-xs ml-2">
@@ -75,7 +75,7 @@ export default function AdminDashboard({auth, allCustomers, customers}) {
                                     </span>
                                 </li>
                                 <li onClick={() => setActiveStatus(3)}
-                                    className={activeStatus === 3 ? "text-sm border-indigo-700 pt-3 rounded-t text-indigo-700 mr-12" : "text-sm text-gray-600 py-3 flex items-center mr-12 hover:text-indigo-700 cursor-pointer"}>
+                                    className={activeStatus === 3 ? "text-sm border-indigo-700 pt-3 rounded-t bg-purple-300 text-indigo-700 mr-12" : "text-sm text-gray-600 py-3 flex items-center mr-12 hover:text-indigo-700 cursor-pointer"}>
                                     <span>Individual Customers</span>
                                     <span
                                         className="inline-flex items-center justify-center p-3 h-6 w-6 rounded-full bg-red-500 text-white text-xs ml-2">
@@ -83,7 +83,7 @@ export default function AdminDashboard({auth, allCustomers, customers}) {
                                     </span>
                                 </li>
                                 <li onClick={() => setActiveStatus(4)}
-                                    className={activeStatus === 4 ? "text-sm border-indigo-700 pt-3 rounded-t text-indigo-700 mr-12" : "text-sm text-gray-600 py-3 flex items-center mr-12 hover:text-indigo-700 cursor-pointer"}>
+                                    className={activeStatus === 4 ? "text-sm border-indigo-700 pt-3 rounded-t bg-purple-300 text-indigo-700 mr-12" : "text-sm text-gray-600 py-3 flex items-center mr-12 hover:text-indigo-700 cursor-pointer"}>
                                     <span>Organization Customers</span>
                                     <span
                                         className="inline-flex items-center justify-center p-3 h-6 w-6 rounded-full bg-red-500 text-white text-xs ml-2">

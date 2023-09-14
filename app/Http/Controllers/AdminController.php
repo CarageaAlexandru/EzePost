@@ -40,14 +40,14 @@ class AdminController extends Controller
                     "username" => "User2",
                     "vepost_address" => "123 Fake St",
                     "displayname" => "Individual User 2",
-                    "status" => "active",
+                    "status" => "unsubscribed",
                     "type" => "individual"
                 ],
                 [
                     "username" => "User3",
                     "vepost_address" => "123 Fake St",
                     "displayname" => "Individual User 3",
-                    "status" => "active",
+                    "status" => "expired",
                     "type" => "individual"
                 ],
             ],
@@ -63,14 +63,14 @@ class AdminController extends Controller
                     "username" => "orgUser2",
                     "post_address" => "456 Fake Ave",
                     "displayname" => "Organization User 2",
-                    "status" => "active",
+                    "status" => "expired",
                     "type" => "organization"
                 ],
                 [
                     "username" => "orgUser3",
                     "post_address" => "456 Fake Ave",
                     "displayname" => "Organization User 3",
-                    "status" => "active",
+                    "status" => "cancelled",
                     "type" => "organization"
                 ],
             ]

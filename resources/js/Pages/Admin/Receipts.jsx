@@ -13,7 +13,7 @@ export default function Receipts({auth, packages}) {
     console.log(loading)
     const handleCheckboxChange = (e, pkg) => {
         if (e.target.checked) {
-            if (selectedFiles.length === 5) {
+            if (selectedFiles.length > 5) {
                 toast.error('You can only select 5 files at a time.');
                 return;
             }
@@ -60,19 +60,23 @@ export default function Receipts({auth, packages}) {
             dark:focus:ring-green-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full
             text-center cursor-pointer"
                             onClick={handleGenerateReceipt}
-                            disabled={loading || selectedFiles.length === 0}
                         >
                             {loading ? 'Loading...' : 'Generate Receipt'}
                         </a>
                         <ul role="list" className="divide-y divide-gray-200">
                             {packages.map((pkg) => (
-                                <li key={pkg.id}>
-                                    <input
-                                        type="checkbox"
-                                        value={pkg.id}
-                                        onChange={(e) => handleCheckboxChange(e, pkg)}
-                                    />
-                                    <Package key={pkg.id} pkg={pkg}/>
+                                <li key={pkg.id} className="flex items-center py-2">
+                                    <div className="flex-shrink-0 mr-3">
+                                        <input
+                                            type="checkbox"
+                                            value={pkg.id}
+                                            className="form-checkbox text-indigo-600 h-5 w-5 mx-2"
+                                            onChange={(e) => handleCheckboxChange(e, pkg)}
+                                        />
+                                    </div>
+                                    <div className="flex-grow">
+                                        <Package key={pkg.id} pkg={pkg}/>
+                                    </div>
                                 </li>
                             ))}
                         </ul>

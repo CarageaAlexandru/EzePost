@@ -14,6 +14,7 @@ class PackagesController extends Controller
      */
     public function getAllPackages($type)
     {
+//        filtering for received packages should be done when time l time recieve end ( same for the sent )
         $receiver_vepost_addr = '2334407987654321';
         $sender_vepost_addr = '2334407123456789';
         $perPage = 10;
@@ -21,7 +22,8 @@ class PackagesController extends Controller
         switch ($type) {
             case 'all':
 //                CHECK WHICH column to use for descending order
-                $packages = Vepost_tracking::orderBy('time_send_start', 'desc')->paginate($perPage);
+//                add a filter for today ,
+                $packages = Vepost_tracking::orderBy('ltime_recv_end', 'desc')->paginate($perPage);
                 break;
             case 'sent':
                 $packages = Vepost_tracking::where('sender_vepost_addr', $sender_vepost_addr)->paginate($perPage);
@@ -30,6 +32,7 @@ class PackagesController extends Controller
                 $packages = Vepost_tracking::where('receiver_vepost_addr', $receiver_vepost_addr)->paginate($perPage);
                 break;
             case 'viewed':
+//                time_post_opened based on this column - This is all null at the moment
                 $packages = Vepost_tracking::where('view_once', '>=', 1)->paginate($perPage);
                 break;
             default:

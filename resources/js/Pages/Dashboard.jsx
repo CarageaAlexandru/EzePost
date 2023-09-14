@@ -6,12 +6,7 @@ import {HiLockOpen} from "react-icons/hi2";
 import {HiSquare3Stack3D} from "react-icons/hi2";
 
 export default function Dashboard({auth, counts}) {
-    let dynamicRoute = {
-        'all': 'all',
-        'received': 'received',
-        'sent': 'sent',
-        'viewed': 'viewed'
-    }
+
     return (
         <AuthenticatedLayout
             user={auth.user}
@@ -39,7 +34,7 @@ export default function Dashboard({auth, counts}) {
                                             Here are the packages received today.
                                         </p>
                                         <div className="mt-5 sm:mt-auto flex-row flex-wrap">
-                                            <a href={`/packages/${dynamicRoute.received}`}
+                                            <a href={`/packages/received`}
                                                className="py-2 px-2 mt-4 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-blue-500 text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all text-sm dark:focus:ring-offset-gray-800"> View
                                                 Packages
                                             </a>
@@ -66,7 +61,7 @@ export default function Dashboard({auth, counts}) {
                                             Here are the packages sent today.
                                         </p>
                                         <div className="mt-5 sm:mt-auto flex-row flex-wrap">
-                                            <a href={`/packages/${dynamicRoute.sent}`}
+                                            <a href={`/packages/sent`}
                                                className="py-2 px-2 mt-4 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-blue-500 text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all text-sm dark:focus:ring-offset-gray-800"> View
                                                 Packages
                                             </a>
@@ -93,7 +88,7 @@ export default function Dashboard({auth, counts}) {
                                             Here are the packages received today.
                                         </p>
                                         <div className="mt-5 sm:mt-auto flex-row flex-wrap">
-                                            <a href={`/packages/${dynamicRoute.viewed}`}
+                                            <a href={`/packages/viewed`}
                                                className="py-2 px-2 mt-4 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-blue-500 text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all text-sm dark:focus:ring-offset-gray-800"> View
                                                 Packages
                                             </a>
@@ -120,7 +115,7 @@ export default function Dashboard({auth, counts}) {
                                             Here are the packages received today.
                                         </p>
                                         <div className="mt-5 sm:mt-auto flex-row flex-wrap">
-                                            <a href={`/packages/${dynamicRoute.all}`}
+                                            <a href={`/packages/all`}
                                                className="py-2 px-2 mt-4 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-blue-500 text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all text-sm dark:focus:ring-offset-gray-800"> View
                                                 Packages
                                             </a>
