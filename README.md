@@ -33,9 +33,11 @@ php artisan serve & npm run dev
 
 -   **Authentication**: The application provides user authentication with login, registration, and logout functionalities.
 
-  ![Login GIF](gifs/login.gif)
+  ![Register GIF](gifs/register.gif)
     
 -   **Profile Management**: Users can manage their profiles including editing and deleting their profiles.
+
+  ![Profile Update GIF](gifs/profile-update.gif)
     
 -   **Subscription Management**: Users can subscribe to various packages, and manage their subscriptions.
     
