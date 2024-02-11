@@ -160,7 +160,7 @@ class SubscriptionController extends Controller
 // Authenticate your user.
         $session = \Stripe\BillingPortal\Session::create([
             'customer' => $customer,
-            'return_url' => 'https://example.com/account',
+            'return_url' => route('dashboard'),
         ]);
 
 // Redirect to the customer portal.

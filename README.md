@@ -33,14 +33,24 @@ php artisan serve & npm run dev
 
 -   **Authentication**: The application provides user authentication with login, registration, and logout functionalities.
 
-  ![Register GIF](gifs/register.gif)
+    ![Register GIF](gifs/register.gif)
     
 -   **Profile Management**: Users can manage their profiles including editing and deleting their profiles.
 
-  ![Profile Update GIF](gifs/profile-update.gif)
+    ![Profile Update GIF](gifs/profile-update.gif)
+
+-   **Package Management**: Users can view all packages, sent packages, received packages, and viewed packages with Pagination implemented.
+
+    ![Package Management GIF](gifs/package-management.gif)
+
+-   **Subscription Management**: Users can subscribe to various packages, and manage their subscriptions via Stripe API.
     
--   **Subscription Management**: Users can subscribe to various packages, and manage their subscriptions.
-    
+    ![Subscription Management GIF](gifs/subscripe-stripe.gif)
+
+-   **Manage Billing**: Users can manage their billing details including updating their payment method and viewing their billing history.
+- 
+    ![Manage Billing GIF](gifs/manage-billing.gif)
+- 
 -   **Admin Dashboard**: Administrators have access to an admin dashboard where they can manage users, subscriptions, receipts, and more.
     
 -   **Static Pages**: The application includes static pages such as Home, Pricing, Contact, and About.
