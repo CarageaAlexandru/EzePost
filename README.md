@@ -1,10 +1,4 @@
-
-  
-Certainly! Here's a complete Markdown file for your README.md:
-
-markdownCopy code
-
-`# Laravel Application
+# Laravel Application
 
 Welcome to our Laravel application! This application provides various features including authentication, user profiles, subscription management, admin dashboard, and more.
 
