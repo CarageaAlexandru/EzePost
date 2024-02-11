@@ -32,6 +32,8 @@ php artisan serve & npm run dev
 ## Features
 
 -   **Authentication**: The application provides user authentication with login, registration, and logout functionalities.
+
+  ![Login GIF](gifs/login.gif)
     
 -   **Profile Management**: Users can manage their profiles including editing and deleting their profiles.
     
