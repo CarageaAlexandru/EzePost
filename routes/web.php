@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DownloadController;
 use App\Http\Controllers\DashboardController;
@@ -48,13 +49,12 @@ Route::middleware('auth')->group(function () {
     Route::post('/checkout', [SubscriptionController::class, 'checkout'])->name('checkout');
     Route::get('/success', [SubscriptionController::class, 'success'])->name('checkout.success');
     Route::get('/cancelled', [SubscriptionController::class, 'cancelled'])->name('checkout.cancelled');
-
+    Route::get('logout', [AuthenticatedSessionController::class, 'destroy'])
+        ->name('logout');
 });
 
-//    disabled csrf for webhook and this needs  to be outside of auth middleware
 Route::post('/webhook', [SubscriptionController::class, 'webhook'])->name('webhook');
 Route::post('/customer-portal', [SubscriptionController::class, 'customerPortal'])->name('customer-portal');
-
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -69,7 +69,6 @@ Route::middleware(['auth', 'is.admin'])->group(function () {
     Route::get('/admin/receipts', [ReceiptController::class, 'index'])->name('admin.receipts');
     Route::post('/admin/receipt', [ReceiptController::class, 'generateReceipt'])->name('admin.receipt');
     Route::get('/admin/receipt/{id}', [ReceiptController::class, 'showReceipt'])->name('admin.receipt.show');
-
 });
 
 

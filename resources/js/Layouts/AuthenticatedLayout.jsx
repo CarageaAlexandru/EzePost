@@ -7,9 +7,6 @@ import {Link} from '@inertiajs/react';
 import ezepostLogo from "/resources/images/ezepost-logo.svg"
 
 export default function Authenticated({user, header, children}) {
-    const [showingNavigationDropdown, setShowingNavigationDropdown] = useState(false);
-    console.log(user, "AUHTENTICATED LAYOUT")
-
     return (
         <div className="min-h-screen bg-gray-100 flex">
             <nav className="bg-white border-r border-gray-100 w-64 min-h-screen">
@@ -26,7 +23,6 @@ export default function Authenticated({user, header, children}) {
                         </NavLink>
                         <ul className="flex flex-col py-4 space-y-1">
                             <li>
-                                {/*Start of the sidebar nav*/}
                                 <span
                                     className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6 cursor-default"
                                 >
@@ -42,8 +38,6 @@ export default function Authenticated({user, header, children}) {
 
                             <li className="pl-8">
                                 {" "}
-                                {/* Indentation class added */}
-
                                 <a href={`/packages/all`}
                                    className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6"
                                 >
@@ -62,7 +56,6 @@ export default function Authenticated({user, header, children}) {
                             </li>
                             <li className="pl-8">
                                 {" "}
-                                {/* Indentation class added */}
                                 <a href={`/packages/received`}
 
                                    className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6"
@@ -82,7 +75,6 @@ export default function Authenticated({user, header, children}) {
                             </li>
                             <li className="pl-8">
                                 {" "}
-                                {/* Indentation class added */}
                                 <a href={`/packages/viewed`}
                                    className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6"
                                 >
@@ -101,7 +93,6 @@ export default function Authenticated({user, header, children}) {
                             </li>
                             <li className="pl-8">
                                 {" "}
-                                {/* Indentation class added */}
                                 <a href={`/packages/sent`}
                                    className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6"
                                 >
@@ -118,7 +109,6 @@ export default function Authenticated({user, header, children}) {
                                 </a>
                             </li>
                             <li>
-                                {/*Start of the sidebar nav*/}
                                 <span
                                     className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6 cursor-default"
                                 >
@@ -133,7 +123,6 @@ export default function Authenticated({user, header, children}) {
                             </li>
                             <li className="pl-8">
                                 {" "}
-                                {/* Indentation class added */}
                                 <a
                                     href="#"
                                     className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6"
@@ -153,7 +142,6 @@ export default function Authenticated({user, header, children}) {
                             </li>
                             <li className="pl-8">
                                 {" "}
-                                {/* Indentation class added */}
                                 <a
                                     href="#"
                                     className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6"
@@ -172,7 +160,6 @@ export default function Authenticated({user, header, children}) {
                             </li>
                             <li className="pl-8">
                                 {" "}
-                                {/* Indentation class added */}
                                 <a
                                     href="#"
                                     className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6"
@@ -192,7 +179,6 @@ export default function Authenticated({user, header, children}) {
                             </li>
                             <li className="pl-8">
                                 {" "}
-                                {/* Indentation class added */}
                                 <a
                                     href="#"
                                     className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6"
@@ -210,7 +196,6 @@ export default function Authenticated({user, header, children}) {
                                 </a>
                             </li>
                             <li>
-                                {/*Start of the sidebar nav*/}
                                 <span
                                     className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6 cursor-default"
                                 >
@@ -225,7 +210,6 @@ export default function Authenticated({user, header, children}) {
                             </li>
                             <li className="pl-8">
                                 {" "}
-                                {/* Indentation class added */}
                                 <a
                                     href={route('pricing')}
                                     className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6"
@@ -253,7 +237,6 @@ export default function Authenticated({user, header, children}) {
                             </li>
                             <li className="pl-8">
                                 {" "}
-                                {/* Indentation class added */}
                                 <a
                                     href="#"
                                     className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6"
@@ -274,7 +257,6 @@ export default function Authenticated({user, header, children}) {
                             </li>
                             <li className="pl-8">
                                 {" "}
-                                {/* Indentation class added */}
                                 <a
                                     className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6"
                                 >
@@ -303,7 +285,6 @@ export default function Authenticated({user, header, children}) {
                                         className="inline-flex items-center hover:bg-gray-50 border-0 hover:border-l-8 hover:border-indigo-500 px-4 mx-auto py-3 text-sm leading-4 font-medium text-gray-600 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150"
                                     >
                                         {user.name}
-
                                         <svg
                                             className="ml-2 -mr-0.5 h-4 w-4"
                                             xmlns="http://www.w3.org/2000/svg"

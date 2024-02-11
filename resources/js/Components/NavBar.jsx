@@ -4,8 +4,8 @@ import ApplicationLogo from '@/Components/ApplicationLogo';
 
 export default function NavBar({auth}) {
     const user = auth ? auth.user : null;
-    console.log(user)
-   
+    console.log(user, "Navbar")
+
     return (
         <div className="bg-white border-b border-gray-100 w-full fixed top-0">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
@@ -48,19 +48,28 @@ export default function NavBar({auth}) {
                         >
                             About Us
                         </Link>
+                        {/*render the login only if there is no user, else, dashboard */}
 
                         <Link
                             href={route('login')}
                             className="font-semibold text-black hover:text-white hover:bg-gray-800 dark:text-gray-600 dark:hover:text-white dark:hover:bg-gray-800 px-2 py-2 rounded transition-colors duration-200 focus:outline-none"
                         >
-                            Log in
+                            Dashboard
                         </Link>
 
+                        {user.role === "admin" && (
+                            <Link
+                                href={route('admin.dashboard')}
+                                className="font-semibold text-black hover:text-white hover:bg-gray-800 dark:text-gray-600 dark:hover:text-white dark:hover:bg-gray-800 px-2 py-2 rounded transition-colors duration-200 focus:outline-none"
+                            >
+                                Admin Dashboard
+                            </Link>
+                        )}
                         <Link
-                            href={route('register')}
+                            href={route('logout')}
                             className="font-semibold text-black hover:text-white hover:bg-gray-800 dark:text-gray-600 dark:hover:text-white dark:hover:bg-gray-800 px-2 py-2 rounded transition-colors duration-200 focus:outline-none"
                         >
-                            Register
+                            Log out
                         </Link>
                     </>
                 ) : (

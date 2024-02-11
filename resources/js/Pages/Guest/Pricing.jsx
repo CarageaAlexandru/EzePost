@@ -17,7 +17,7 @@ const Pricing = ({plans, csrf}) => {
                     <p className="px-4 py-4 text-center text-4xl dark:text-white text-gray-600">Choose the plan that
                         suits your needs. You can switch between monthly and yearly billing at any time.</p>
                 </div>
-                <div className="bg-gray-100 shadow rounded-full bg-gray-900 flex flex-col items-center mt-10">
+                <div className="shadow rounded-full bg-gray-900 flex flex-col items-center mt-10">
                     <div className="bg-gray-100 shadow rounded-full flex items-center">
                         <button onClick={() => setPlanType('Personal')}
                                 className={`bg-gray-100 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 focus:outline-none text-base leading-none text-gray-600 rounded-full py-4 px-6 mr-1 ${planType === 'Personal' ? 'bg-indigo-700 text-white' : ''}`}>

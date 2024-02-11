@@ -160,8 +160,6 @@ export default function Receipt({auth, files, receipt}) {
                                     </tbody>
                                 </table>
                             </div>
-
-
                         </div>
                     </div>
                 </div>
