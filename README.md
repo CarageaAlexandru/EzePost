@@ -1,6 +1,15 @@
 # Laravel Application
 
-Welcome to our Laravel application! This application provides various features including authentication, user profiles, subscription management, admin dashboard, and more.
+-   Development of a PHP Laravel web application with Stripe payment integration.
+-   Platform for individuals and organizations to transfer files securely using the EZE POST desktop application.
+-   Web application features:
+    -   User registration.
+    -   Subscription management.
+    -   Receipt generation.
+    -   Customer portal integration with Stripe for payment processing.
+-   Separate admin and customer areas with distinct functionalities tailored to their roles.
+-   Emphasis on modern design, robust security measures, and scalability.
+-   Ensures a seamless and secure file transfer experience for users.
 
 ## Getting Started
 
