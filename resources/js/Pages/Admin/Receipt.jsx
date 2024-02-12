@@ -114,10 +114,6 @@ export default function Receipt({auth, files, receipt}) {
                                     </thead>
                                     <tbody>
                                     <tr className="border-b border-gray-300 dark:border-gray-600">
-                                        <td className="px-4 py-2">Is this the control string ?</td>
-                                        <td className="px-4 py-2">Is this the control string ?</td>
-                                    </tr>
-                                    <tr className="border-b border-gray-300 dark:border-gray-600">
                                         <td className="px-4 py-2">{files[0].receiver_username}</td>
                                         <td className="px-4 py-2">{files[0].sender_username}</td>
                                     </tr>

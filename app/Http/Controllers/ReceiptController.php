@@ -36,13 +36,13 @@ class ReceiptController extends Controller
         $receipt->file_ids = implode(',', $fileIds); // Convert array to comma-separated string
         $receipt->save();
 
-//
+
 //        return response()->json([
 //            'status' => 'success',
 //            'receiptId' => $receiptId,
 //            'files' => $packages
 //        ]);
-        return Redirect::route('admin.receipt.show', ['id' => $receipt->id]);
+        return Redirect::route('admin.receipt.show', ['id' => $receiptId]);
 
     }
 

@@ -27,7 +27,6 @@ export default function AdminDashboard({auth, allCustomers, customers}) {
 
         return (
             <>
-                <h1 className="bg-red-600">REMEMBER TO FETCH CLIENTS FROM DB</h1>
                 <ul role="list" className="divide-y divide-gray-100">
                     {customersToRender.map((customer) => (
                         <li key={customer.username} className="flex justify-between gap-x-6 py-5">

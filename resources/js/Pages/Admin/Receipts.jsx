@@ -10,7 +10,6 @@ import Pagination from "@/Components/Pagination.jsx";
 export default function Receipts({auth, packages}) {
     const [loading, setLoading] = useState(false);
     const [selectedFiles, setSelectedFiles] = useState([]);
-    console.log(loading)
     const handleCheckboxChange = (e, pkg) => {
         if (e.target.checked) {
             if (selectedFiles.length > 5) {
@@ -54,7 +53,6 @@ export default function Receipts({auth, packages}) {
             <div className="py-12">
                 <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
                     <div className="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                        <h1>Here we will display the receipts.</h1>
                         <a
                             className="text-white bg-green-600 hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-200
             dark:focus:ring-green-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full

@@ -48,10 +48,16 @@ php artisan serve & npm run dev
     ![Subscription Management GIF](gifs/subscripe-stripe.gif)
 
 -   **Manage Billing**: Users can manage their billing details including updating their payment method and viewing their billing history.
-- 
+
     ![Manage Billing GIF](gifs/manage-billing.gif)
 - 
--   **Admin Dashboard**: Administrators have access to an admin dashboard where they can manage users, subscriptions, receipts, and more.
+-   **Admin Dashboard && Management**: Administrators have access to an admin dashboard where they can manage users, subscriptions, prices, and more.
+
+    ![Admin Prices GIF](gifs/admin-prices.gif)
+
+-   **Receipt Generation**: Admin can generate receipts for their packages.
+
+    ![Receipt Generation GIF](gifs/receipt-generation.gif)
     
 -   **Static Pages**: The application includes static pages such as Home, Pricing, Contact, and About.
 
